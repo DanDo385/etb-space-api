@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+  const [flights, setFlights] = useState([
+    {
+      flight_number: 1,
+      mission_name: "Mission 1",
+    },
+    {
+      flight_number: 2,
+      mission_name: "Mission 2",
+    },
+  ]);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ul>
+      {flights.map((flight) => (
+        <li key={flight.flight_number}>
+          <h2>{flight.mission_name}</h2>
+          <p>{flight.flight_number}</p>
+        </li>
+      ))};
+    </ul>
   );
 }
 
