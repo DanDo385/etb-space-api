@@ -21,6 +21,10 @@ function App() {
         <li key={flight.flight_number}>
           <h2>{flight.mission_name}</h2>
           <p>Flight Number: {flight.flight_number}</p>
+          <p>Launched Date: {flight.launch_date_utc}</p>
+          <p>Flight Details: {flight.details}</p>
+          <p>Launch Year: {flight.launch_year}</p>
+          <a href={flight.links.article_link}>Read More About the Launch...</a>
         </li>
       ))}
     </ul>
