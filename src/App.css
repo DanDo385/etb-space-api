@@ -36,3 +36,36 @@
     transform: rotate(360deg);
   }
 }
+
+.flights-list {
+  padding: 0;
+  list-style: none;
+}
+
+.flights-list li {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.flights-list li h2 {
+  margin: 0 0 5px 0;
+}
+
+.flights-list li a {
+  margin-top: 10px;
+  color: blue;  
+} 
+
+.flight-info {
+  display: flex;
+}
+
+.flight-info img {
+  margin-right: 20px;
+  float: left;
+}
+
+.flight-data {
+  display: inline-block;
+}
